@@ -2,7 +2,7 @@
   "store/cartman.title": "Cartman",
   "store/cartman.cartmanDescription": "O Cartman te ajuda a criar, investigar e compartilhar Carrinhos.",
   "store/cartman.cartmanWarning": "Não se preocupe! O Cartman NÃO aparece para seus clientes.",
-  "store/cartman.copyCart": "Copy link",
+  "store/cartman.copyCart": "Copiar link",
   "store/cartman.copiedCart": "Copiado!",
   "store/cartman.emptyCart": "Limpar Carrinho",
   "store/cartman.addBySkuId": "Adicionar itens pelo ID do SKU",
