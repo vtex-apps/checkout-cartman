@@ -37,7 +37,7 @@ const Actions: React.FC = () => {
     <div className="pa5 w-100 cf bb b--light-gray tc">
       <span className="mr4">
         <Button disabled={copied} variation="primary" onClick={handleCopyCart}>
-          {copied === true ? (
+          {copied ? (
             <FormattedMessage id="store/cartman.copiedCart" />
           ) : (
             <FormattedMessage id="store/cartman.copyCart" />
