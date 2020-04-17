@@ -249,9 +249,9 @@ toggle-selection@^1.0.6:
   version "0.24.6"
   resolved "https://lucas--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.checkout-cart@0.24.6+build1587147216/public/@types/vtex.checkout-cart#aae131b892db5c72bab42e5749c4279ea8f47a16"
 
-"vtex.checkout-graphql@https://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.32.0/public/@types/vtex.checkout-graphql":
+"vtex.checkout-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.32.0/public/@types/vtex.checkout-graphql":
   version "0.32.0"
-  resolved "https://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.32.0/public/@types/vtex.checkout-graphql#eb80b3e7b18260ed0cb6f792d423ea900d94edec"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.32.0/public/@types/vtex.checkout-graphql#eb80b3e7b18260ed0cb6f792d423ea900d94edec"
 
 "vtex.order-manager@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.8.4/public/@types/vtex.order-manager":
   version "0.8.4"
