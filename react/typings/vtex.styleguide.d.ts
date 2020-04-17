@@ -1,7 +1,13 @@
 import React from 'react'
 
 declare module 'vtex.styleguide' {
-  const IconClose: React.FC<{ size?: number }>
+  interface IconProps {
+    size?: number
+  }
+
+  const IconClose: React.FC<IconProps>
+
+  const IconCaretRight: React.FC<IconProps>
 
   const Button: React.FC<Omit<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
