@@ -1,7 +1,7 @@
 {
   "store/cartman.title": "Cartman",
   "store/cartman.cartmanDescription": "Cartman te ayuda a crear, investigar y compartir Carritos.",
-  "store/cartman.cartmanWarning": "No te preocupes! Cartman no está visible para tus clientes :)",
+  "store/cartman.cartmanWarning": "No te preocupes! Cartman no está visible para tus clientes",
   "store/cartman.copyCart": "Copiar link",
   "store/cartman.copiedCart": "Copiado!",
   "store/cartman.emptyCart": "Vaciar Carrito",

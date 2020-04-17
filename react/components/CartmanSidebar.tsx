@@ -2,6 +2,8 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { ButtonPlain, IconClose } from 'vtex.styleguide'
 
+import Actions from './Actions'
+
 const Header: React.FC = () => {
   return (
     <header className="f3 bg-muted-5 c-on-base pa5 tc br3-m br--top-m fw5 flex items-center justify-between">
@@ -28,6 +30,8 @@ const CartmanSidebar: React.FC = () => {
           <div className="flex-none">
             <Header />
           </div>
+
+          <Actions />
 
           <div className="flex flex-column items-center mv5 ph4 mv7-m w-100 lh-copy f6">
             <span className="c-muted-1 dib mb3">
