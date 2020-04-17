@@ -1,18 +1,33 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import { ButtonPlain, IconClose } from 'vtex.styleguide'
+import { ButtonPlain, IconClose, IconCaretLeft } from 'vtex.styleguide'
 
 import Actions from './Actions'
+import { useCartman } from './CartmanContext'
 
 const Header: React.FC = () => {
+  const { title, setOpen, backAction } = useCartman()
+
   return (
     <header className="f3 bg-muted-5 c-on-base pa5 tc br3-m br--top-m fw5 flex items-center justify-between">
-      <div />
-      <span>
-        <FormattedMessage id="store/cartman.title" />
+      <div className="flex-auto flex">
+        {backAction && (
+          <button
+            className="bn bg-transparent pointer pa0 outline-0"
+            onClick={backAction}
+          >
+            <IconCaretLeft />
+          </button>
+        )}
+      </div>
+      <span className="flex-auto">
+        {title ?? <FormattedMessage id="store/cartman.title" />}
       </span>
-      <div>
-        <button className="bn bg-transparent pointer dn-m pa0 flex items-center">
+      <div className="flex-auto flex justify-end">
+        <button
+          className="bn bg-transparent pointer pa0 dn-m flex items-center"
+          onClick={() => setOpen(false)}
+        >
           <IconClose size={24} />
         </button>
       </div>
