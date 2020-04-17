@@ -3,6 +3,7 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
+    "@types/node": "^13.11.1",
     "@types/react": "^16.9.34",
     "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.99.0/public/@types/vtex.render-runtime"
   },
