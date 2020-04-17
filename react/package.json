@@ -1,0 +1,12 @@
+{
+  "name": "checkout-cartman",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.99.0/public/@types/vtex.render-runtime"
+  },
+  "dependencies": {
+    "react": "^16.13.1"
+  }
+}
