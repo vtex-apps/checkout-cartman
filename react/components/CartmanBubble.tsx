@@ -7,6 +7,7 @@ import { IconClose } from 'vtex.styleguide'
 import CartmanSidebar from './CartmanSidebar'
 import CartmanIcon from './CartmanIcon'
 import styles from './CartmanBubble.css'
+import { CartmanProvider } from './CartmanContext'
 
 const CartmanBubble: React.FC = () => {
   const [containerElement] = useState(() => {
@@ -24,28 +25,30 @@ const CartmanBubble: React.FC = () => {
   }
 
   return ReactDOM.createPortal(
-    <div className="w-100 fixed right-1 bottom-1 right-2-m bottom-2-m flex flex-column items-end z-max">
-      {open && <CartmanSidebar />}
-      <CSSTransition
-        in
-        appear
-        timeout={{ appear: 2000 }}
-        classNames={{ appear: styles.bubbleAppear, enter: 'enter' }}
-      >
-        <button
-          className={classnames(
-            'items-center bn shadow-1 pa4 pa5-m br-100 pointer outline-0',
-            {
-              'dn flex-m bg-base': open,
-              'flex bg-action-primary': !open,
-            }
-          )}
-          onClick={handleBubbleClick}
+    <CartmanProvider open={open} setOpen={setOpen}>
+      <div className="w-100 fixed right-1 bottom-1 right-2-m bottom-2-m flex flex-column items-end z-max">
+        {open && <CartmanSidebar />}
+        <CSSTransition
+          in
+          appear
+          timeout={{ appear: 2000 }}
+          classNames={{ appear: styles.bubbleAppear, enter: 'enter' }}
         >
-          {open ? <IconClose size={24} /> : <CartmanIcon />}
-        </button>
-      </CSSTransition>
-    </div>,
+          <button
+            className={classnames(
+              'items-center bn shadow-1 pa4 pa5-m br-100 pointer outline-0',
+              {
+                'dn flex-m bg-base': open,
+                'flex bg-action-primary': !open,
+              }
+            )}
+            onClick={handleBubbleClick}
+          >
+            {open ? <IconClose size={24} /> : <CartmanIcon />}
+          </button>
+        </CSSTransition>
+      </div>
+    </CartmanProvider>,
     containerElement
   )
 }
