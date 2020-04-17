@@ -11,7 +11,7 @@
     "vtex.checkout-cart": "https://lucas--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.checkout-cart@0.24.6+build1587147216/public/@types/vtex.checkout-cart",
     "vtex.order-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.8.4/public/@types/vtex.order-manager",
     "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.99.0/public/@types/vtex.render-runtime",
-    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.113.1/public/@types/vtex.styleguide"
+    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.113.2/public/@types/vtex.styleguide"
   },
   "dependencies": {
     "classnames": "^2.2.6",

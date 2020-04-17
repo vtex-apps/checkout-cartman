@@ -4,13 +4,16 @@ import { ButtonPlain, IconClose } from 'vtex.styleguide'
 
 const Header: React.FC = () => {
   return (
-    <header className="f3 bg-muted-5 c-on-base pa5 tc br3-m br--top-m fw5 flex justify-between">
-      <span className="w-100">
+    <header className="f3 bg-muted-5 c-on-base pa5 tc br3-m br--top-m fw5 flex items-center justify-between">
+      <div />
+      <span>
         <FormattedMessage id="store/cartman.title" />
       </span>
-      <button className="bn bg-transparent pointer pa5 dn-m">
-        <IconClose size={24} />
-      </button>
+      <div>
+        <button className="bn bg-transparent pointer dn-m pa0 flex items-center">
+          <IconClose size={24} />
+        </button>
+      </div>
     </header>
   )
 }
@@ -19,7 +22,7 @@ const CartmanSidebar: React.FC = () => {
   const handleDeactivate = () => {}
 
   return (
-    <aside className="w-100 mw6-m mb0 mb6-m">
+    <aside className="w-100 vh-100 h-auto-m nr5 mr0-m nb5 mb6-m mw6-m pl8-m">
       <div className="h-100 br0 br3-m bg-white shadow-1-m">
         <div className="flex flex-column">
           <div className="flex-none">
