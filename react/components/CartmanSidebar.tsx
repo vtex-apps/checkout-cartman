@@ -45,9 +45,12 @@ const CartmanSidebar: React.FC = () => {
   const handleDetailBackClick = useCallback(() => setCurrentStep(null), [])
 
   return (
-    <aside className="w-100 vh-100 h-auto-m nr5 mr0-m nb5 mb6-m mw6-m pl8-m">
+    <aside
+      className="w-100 h-100 h-auto-m mw6-m pl8-m mb0 mb6-m"
+      style={{ minHeight: 0 }}
+    >
       <div className="h-100 br0 br3-m bg-white shadow-1-m">
-        <div className="flex flex-column">
+        <div className="h-100 flex flex-column">
           <div className="flex-none">
             <Header />
           </div>
