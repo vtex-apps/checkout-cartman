@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import React, { useState, Fragment, useCallback } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { ButtonPlain, IconClose, IconCaretLeft } from 'vtex.styleguide'
@@ -37,7 +38,11 @@ const Header: React.FC = () => {
   )
 }
 
-const CartmanSidebar: React.FC = () => {
+interface Props {
+  className?: string
+}
+
+const CartmanSidebar: React.FC<Props> = ({ className }) => {
   const handleDeactivate = () => {}
 
   const [currentStep, setCurrentStep] = useState<string | null>(null)
@@ -46,7 +51,10 @@ const CartmanSidebar: React.FC = () => {
 
   return (
     <aside
-      className="w-100 h-100 h-auto-m mw6-m pl8-m mb0 mb6-m"
+      className={classnames(
+        className,
+        'w-100 h-100 h-auto-m mw6-m pl8-m mb0 mb6-m'
+      )}
       style={{ minHeight: 0 }}
     >
       <div className="h-100 br0 br3-m bg-white shadow-1-m">

@@ -1,3 +1,11 @@
+.disablePointerEvents {
+  pointer-events: none;
+}
+
+.enablePointerEvents {
+  pointer-events: auto;
+}
+
 .bubbleAppear {
   animation-duration: 2s;
   animation-name: hello;
