@@ -26,7 +26,15 @@ const CartmanBubble: React.FC = () => {
 
   return ReactDOM.createPortal(
     <CartmanProvider open={open} setOpen={setOpen}>
-      <div className="fixed right-0 bottom-0 left-0 top-0 pa0 pa5-s pa6-m flex flex-column justify-end items-end z-max">
+      <div
+        className={classnames(
+          'fixed right-0 bottom-0 pa6-m flex flex-column justify-end items-end z-max',
+          {
+            'top-0 left-0 pa0': open,
+            pa5: !open,
+          }
+        )}
+      >
         {open && <CartmanSidebar />}
         <CSSTransition
           in
@@ -36,7 +44,7 @@ const CartmanBubble: React.FC = () => {
         >
           <button
             className={classnames(
-              'items-center bn shadow-1 pa4 pa5-m br-100 pointer outline-0',
+              'items-center bn shadow-1 pa5 br-100 pointer outline-0',
               {
                 'dn flex-m bg-base': open,
                 'flex bg-action-primary': !open,
