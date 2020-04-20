@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 import { OrderForm } from 'vtex.order-manager'
 import { Button } from 'vtex.styleguide'
 import { Item } from 'vtex.checkout-graphql'
@@ -15,6 +15,7 @@ const CartDetails: React.FC<{ onBackClick?: () => void }> = ({
   const {
     orderForm: { marketingData, items },
   } = useOrderForm()
+  const intl = useIntl()
 
   const hasMarketingData =
     marketingData.utmSource ??
@@ -28,10 +29,10 @@ const CartDetails: React.FC<{ onBackClick?: () => void }> = ({
   useEffect(
     () =>
       setHeaderData({
-        title: 'Cart Details',
+        title: intl.formatMessage({ id: 'store/cartman.cartDetails' }),
         backAction: onBackClick,
       }),
-    [setHeaderData, onBackClick]
+    [setHeaderData, onBackClick, intl]
   )
 
   const handleSelectItem = (item: Item) => {
