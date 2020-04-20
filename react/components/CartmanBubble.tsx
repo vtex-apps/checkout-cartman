@@ -28,6 +28,7 @@ const CartmanBubble: React.FC = () => {
     <CartmanProvider open={open} setOpen={setOpen}>
       <div
         className={classnames(
+          styles.disablePointerEvents,
           'fixed right-0 bottom-0 pa6-m flex flex-column justify-end items-end z-max',
           {
             'top-0 left-0 pa0': open,
@@ -35,7 +36,7 @@ const CartmanBubble: React.FC = () => {
           }
         )}
       >
-        {open && <CartmanSidebar />}
+        {open && <CartmanSidebar className={styles.enablePointerEvents} />}
         <CSSTransition
           in
           appear
@@ -44,6 +45,7 @@ const CartmanBubble: React.FC = () => {
         >
           <button
             className={classnames(
+              styles.enablePointerEvents,
               'items-center bn shadow-1 pa5 br-100 pointer outline-0',
               {
                 'dn flex-m bg-base': open,
