@@ -38,8 +38,12 @@ const CartDetails: React.FC<{ onBackClick?: () => void }> = ({
     setDetailedItem(item)
   }
 
+  const handleDeselectItem = () => {
+    setDetailedItem(null)
+  }
+
   if (detailedItem) {
-    return <ItemJSONDetail item={detailedItem} />
+    return <ItemJSONDetail item={detailedItem} onBack={handleDeselectItem} />
   }
 
   return (
