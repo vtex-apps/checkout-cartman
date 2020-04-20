@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState, Fragment, useCallback } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { ButtonPlain, IconClose, IconCaretLeft } from 'vtex.styleguide'
 
 import Actions from './Actions'
+import { Menu, MenuItem } from './Menu'
 import { useCartman } from './CartmanContext'
+import CartDetails from './CartDetails'
 
 const Header: React.FC = () => {
   const { title, setOpen, backAction } = useCartman()
@@ -38,6 +40,10 @@ const Header: React.FC = () => {
 const CartmanSidebar: React.FC = () => {
   const handleDeactivate = () => {}
 
+  const [currentStep, setCurrentStep] = useState<string | null>(null)
+
+  const handleDetailBackClick = useCallback(() => setCurrentStep(null), [])
+
   return (
     <aside className="w-100 vh-100 h-auto-m nr5 mr0-m nb5 mb6-m mw6-m pl8-m">
       <div className="h-100 br0 br3-m bg-white shadow-1-m">
@@ -45,21 +51,35 @@ const CartmanSidebar: React.FC = () => {
           <div className="flex-none">
             <Header />
           </div>
+          <div className="overflow-auto">
+            {currentStep === null ? (
+              <Fragment>
+                <Actions />
 
-          <Actions />
+                <Menu>
+                  <MenuItem
+                    title={<FormattedMessage id="store/cartman.viewDetails" />}
+                    onClick={() => setCurrentStep('cart-details')}
+                  />
+                </Menu>
 
-          <div className="flex flex-column items-center mv5 ph4 mv7-m w-100 lh-copy f6">
-            <span className="c-muted-1 dib mb3">
-              <FormattedMessage id="store/cartman.cartmanDescription" />
-            </span>
-            <span className="dib c-emphasis mb3">
-              <FormattedMessage id="store/cartman.cartmanWarning" />
-            </span>
-            <ButtonPlain onClick={handleDeactivate}>
-              <span className="ttu">
-                <FormattedMessage id="store/cartman.deactivate" />
-              </span>
-            </ButtonPlain>
+                <div className="flex flex-column items-center mv5 ph4 mv7-m w-100 lh-copy f6">
+                  <span className="c-muted-1 dib mb3">
+                    <FormattedMessage id="store/cartman.cartmanDescription" />
+                  </span>
+                  <span className="dib c-emphasis mb3">
+                    <FormattedMessage id="store/cartman.cartmanWarning" />
+                  </span>
+                  <ButtonPlain onClick={handleDeactivate}>
+                    <span className="ttu">
+                      <FormattedMessage id="store/cartman.deactivate" />
+                    </span>
+                  </ButtonPlain>
+                </div>
+              </Fragment>
+            ) : currentStep === 'cart-details' ? (
+              <CartDetails onBackClick={handleDetailBackClick} />
+            ) : null}
           </div>
         </div>
       </div>

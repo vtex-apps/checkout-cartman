@@ -9,6 +9,8 @@ declare module 'vtex.styleguide' {
 
   const IconCaretRight: React.FC<IconProps>
 
+  const IconCaretLeft: React.FC<IconProps>
+
   const Button: React.FC<Omit<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     'className' | 'style'
