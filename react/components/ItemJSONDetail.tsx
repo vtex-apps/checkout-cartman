@@ -26,7 +26,9 @@ const ItemJSONDetail: React.FC<Props> = ({ item, onBack }) => {
   return (
     <div className="ph5 mv5 lh-title">
       <h2>{item.skuName}</h2>
-      <JSONView src={item} />
+      <div className="f6">
+        <JSONView src={item} />
+      </div>
     </div>
   )
 }
