@@ -20,6 +20,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intl": "^4.4.0",
+    "react-json-view": "^1.19.1",
     "react-transition-group": "^4.3.0"
   }
 }
