@@ -8,6 +8,7 @@
   "store/cartman.addBySkuId": "Añadir ítems por SKU ID",
   "store/cartman.addRandom": "Añadir ítems aleatorios",
   "store/cartman.viewDetails": "Ver detalles del Carrito",
+  "store/cartman.cartDetails": "Detalles del Carrito",
   "store/cartman.setMarketingData": "Definir datos de Marketing",
   "store/cartman.itemDetail": "Detalles del Ítem",
   "store/cartman.addRandomMessage": "Vamos a filtrar sus ítems por los parametros que usted especificar.",
