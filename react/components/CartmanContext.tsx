@@ -19,7 +19,7 @@ export const useCartman = () => {
   const contextValue = useContext(CartmanContext)
 
   if (contextValue === undefined) {
-    throw new Error('useCartman must be used inside Cartman')
+    throw new Error('useCartman must be used inside CartmanProvider')
   }
 
   return contextValue
