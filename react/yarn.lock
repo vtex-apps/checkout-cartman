@@ -392,13 +392,13 @@ ua-parser-js@^0.7.18:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
   integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
 
-"vtex.checkout-cart@https://lucas--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.checkout-cart@0.24.6+build1587147216/public/@types/vtex.checkout-cart":
+"vtex.checkout-cart@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.24.6/public/@types/vtex.checkout-cart":
   version "0.24.6"
-  resolved "https://lucas--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.checkout-cart@0.24.6+build1587147216/public/@types/vtex.checkout-cart#aae131b892db5c72bab42e5749c4279ea8f47a16"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.24.6/public/@types/vtex.checkout-cart#bc418fa571c5cdda25f8c94d06279cafdf1967c1"
 
-"vtex.checkout-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.32.0/public/@types/vtex.checkout-graphql":
-  version "0.32.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.32.0/public/@types/vtex.checkout-graphql#eb80b3e7b18260ed0cb6f792d423ea900d94edec"
+"vtex.checkout-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.32.1/public/@types/vtex.checkout-graphql":
+  version "0.32.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.32.1/public/@types/vtex.checkout-graphql#c91c0dd4c995e69615560c773b554c7ad09a908d"
 
 "vtex.order-manager@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.8.4/public/@types/vtex.order-manager":
   version "0.8.4"
