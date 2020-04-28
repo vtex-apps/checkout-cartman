@@ -9,9 +9,7 @@ import ItemJSONDetail from './ItemJSONDetail'
 
 const { useOrderForm } = OrderForm
 
-const CartDetails: React.FC<{ onBackClick?: () => void }> = ({
-  onBackClick,
-}) => {
+const CartDetails: React.FC<{ onBack?: () => void }> = ({ onBack }) => {
   const {
     orderForm: { marketingData, items },
   } = useOrderForm()
@@ -24,10 +22,7 @@ const CartDetails: React.FC<{ onBackClick?: () => void }> = ({
 
   const [detailedItem, setDetailedItem] = useState<Item | null>(null)
 
-  useHeaderData(
-    intl.formatMessage({ id: 'store/cartman.cartDetails' }),
-    onBackClick
-  )
+  useHeaderData(intl.formatMessage({ id: 'store/cartman.cartDetails' }), onBack)
 
   const handleSelectItem = (item: Item) => {
     setDetailedItem(item)

@@ -7,6 +7,7 @@ import Actions from './Actions'
 import { Menu, MenuItem } from './Menu'
 import { useCartman } from './CartmanContext'
 import CartDetails from './CartDetails'
+import AddRandomItem from './AddRandomItem'
 
 const Header: React.FC = () => {
   const { title, setOpen, backAction } = useCartman()
@@ -47,7 +48,7 @@ const CartmanSidebar: React.FC<Props> = ({ className }) => {
 
   const [currentStep, setCurrentStep] = useState<string | null>(null)
 
-  const handleDetailBackClick = useCallback(() => setCurrentStep(null), [])
+  const handleBack = useCallback(() => setCurrentStep(null), [])
 
   return (
     <aside
@@ -72,6 +73,10 @@ const CartmanSidebar: React.FC<Props> = ({ className }) => {
                     title={<FormattedMessage id="store/cartman.viewDetails" />}
                     onClick={() => setCurrentStep('cart-details')}
                   />
+                  <MenuItem
+                    title={<FormattedMessage id="store/cartman.addRandom" />}
+                    onClick={() => setCurrentStep('add-random-item')}
+                  />
                 </Menu>
 
                 <div className="flex flex-column items-center mv5 ph4 mv7-m w-100 lh-copy f6">
@@ -89,7 +94,9 @@ const CartmanSidebar: React.FC<Props> = ({ className }) => {
                 </div>
               </Fragment>
             ) : currentStep === 'cart-details' ? (
-              <CartDetails onBackClick={handleDetailBackClick} />
+              <CartDetails onBack={handleBack} />
+            ) : currentStep === 'add-random-item' ? (
+              <AddRandomItem onBack={handleBack} />
             ) : null}
           </div>
         </div>

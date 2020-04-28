@@ -47,5 +47,7 @@
   "store/cartman.deactivate": "Desactivar Cartman",
   "store/cartman.deactivateMessage1": "Cartman no va más a abrir para usted en este Account.",
   "store/cartman.deactivateMessage2": "Si cambia de opinión más adelante, puede reactivar Cartman a través del link:",
-  "store/cartman.deactivateUndo": "Deshacer Desactivar"
+  "store/cartman.deactivateUndo": "Deshacer Desactivar",
+  "store/cartman.priceFromPlaceholder": "99.99",
+  "store/cartman.priceToPlaceholder": "99.99"
 }
