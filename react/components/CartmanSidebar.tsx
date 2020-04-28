@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import React, { useState, Fragment, useCallback } from 'react'
 import { FormattedMessage } from 'react-intl'
-import { ButtonPlain, IconClose, IconCaretLeft } from 'vtex.styleguide'
+import { Button, IconClose, IconCaretLeft } from 'vtex.styleguide'
 
 import Actions from './Actions'
 import { Menu, MenuItem } from './Menu'
@@ -86,11 +86,11 @@ const CartmanSidebar: React.FC<Props> = ({ className }) => {
                   <span className="dib c-emphasis mb3">
                     <FormattedMessage id="store/cartman.cartmanWarning" />
                   </span>
-                  <ButtonPlain onClick={handleDeactivate}>
+                  <Button variation="tertiary" onClick={handleDeactivate}>
                     <span className="ttu">
                       <FormattedMessage id="store/cartman.deactivate" />
                     </span>
-                  </ButtonPlain>
+                  </Button>
                 </div>
               </Fragment>
             ) : currentStep === 'cart-details' ? (
