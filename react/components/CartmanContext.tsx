@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react'
+import React, { useContext, useMemo, useEffect } from 'react'
 
 import useStackState from '../hooks/useStackState'
 
@@ -56,4 +56,15 @@ export const CartmanProvider: React.FC<Props> = ({
       {children}
     </CartmanContext.Provider>
   )
+}
+
+export const useHeaderData = (title: string, backAction?: () => void) => {
+  const { setHeaderData } = useCartman()
+
+  useEffect(() => {
+    return setHeaderData({
+      title,
+      backAction,
+    })
+  }, [setHeaderData, title, backAction])
 }
