@@ -1,10 +1,10 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState } from 'react'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { OrderForm } from 'vtex.order-manager'
 import { Button } from 'vtex.styleguide'
 import { Item } from 'vtex.checkout-graphql'
 
-import { useCartman } from './CartmanContext'
+import { useHeaderData } from './CartmanContext'
 import ItemJSONDetail from './ItemJSONDetail'
 
 const { useOrderForm } = OrderForm
@@ -24,15 +24,9 @@ const CartDetails: React.FC<{ onBackClick?: () => void }> = ({
 
   const [detailedItem, setDetailedItem] = useState<Item | null>(null)
 
-  const { setHeaderData } = useCartman()
-
-  useEffect(
-    () =>
-      setHeaderData({
-        title: intl.formatMessage({ id: 'store/cartman.cartDetails' }),
-        backAction: onBackClick,
-      }),
-    [setHeaderData, onBackClick, intl]
+  useHeaderData(
+    intl.formatMessage({ id: 'store/cartman.cartDetails' }),
+    onBackClick
   )
 
   const handleSelectItem = (item: Item) => {
