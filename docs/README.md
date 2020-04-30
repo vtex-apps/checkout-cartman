@@ -28,7 +28,7 @@ out your cookies and reset `localStorage`.
 Another reason is that you are accessing the Cart page from a external domain (read: the store
 public domain), and not from [https://account-name.myvtex.com/](https://account-name.myvtex.com/),
 which is intended! Cartman is setup to only appear if the user is accessing from an internal
-domain, so it won't show to the users of the store.
+domain, so it won't show to the store customers.
 
 If you have an issue with Cartman not appearing in any other condition not mentioned here, please
 open an issue of contact us in the #shopping-xp Slack channel.
