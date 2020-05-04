@@ -31,4 +31,4 @@ which is intended! Cartman is setup to only appear if the user is accessing from
 domain, so it won't show to the store customers.
 
 If you have an issue with Cartman not appearing in any other condition not mentioned here, please
-open an issue of contact us in the #shopping-xp Slack channel.
+open an issue or contact us in the #shopping-xp Slack channel.
