@@ -5,7 +5,7 @@ import { Alert, Input, Button } from 'vtex.styleguide'
 import { OrderItems } from 'vtex.order-items'
 
 import SEARCH_PRODUCTS_QUERY from '../graphql/productsQuery.graphql'
-import { useCartman } from './CartmanContext'
+import { useHeaderData } from './CartmanContext'
 
 const { useOrderItems } = OrderItems
 
@@ -41,7 +41,6 @@ interface ProductsQueryVariables {
 }
 
 const AddRandomItem: React.FC<{ onBack?: () => void }> = ({ onBack }) => {
-  const { setHeaderData } = useCartman()
   const { addItem } = useOrderItems()
   const intl = useIntl()
   const [searchProducts, { data, loading }] = useLazyQuery<
@@ -60,14 +59,7 @@ const AddRandomItem: React.FC<{ onBack?: () => void }> = ({ onBack }) => {
     searchSpecRef.current = searchSpec
   }, [searchSpec])
 
-  useEffect(
-    () =>
-      setHeaderData({
-        title: intl.formatMessage({ id: 'store/cartman.addRandom' }),
-        backAction: onBack,
-      }),
-    [intl, setHeaderData, onBack]
-  )
+  useHeaderData(intl.formatMessage({ id: 'store/cartman.addRandom' }), onBack)
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = evt => {
     const {
