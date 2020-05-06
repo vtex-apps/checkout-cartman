@@ -25,7 +25,7 @@ admin, inside "Account settings > Account management > Access profiles > Call ce
 then just insert the email address and wait for a few minutes. You will probably need to clear
 out your cookies and reset `localStorage`.
 
-Another reason is that you are accessing the Cart page from a external domain (read: the store
+Another reason is that you are accessing the Cart page from an external domain (read: the store
 public domain), and not from [https://account-name.myvtex.com/](https://account-name.myvtex.com/),
 which is intended! Cartman is setup to only appear if the user is accessing from an internal
 domain, so it won't show to the store customers.
