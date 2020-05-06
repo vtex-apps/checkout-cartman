@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "checkout-cartman",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "title": "Cartman",
   "description": "Create and share carts. Debug checkout.",
   "defaultLocale": "en-US",
