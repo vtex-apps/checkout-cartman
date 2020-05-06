@@ -1,0 +1,47 @@
+.disablePointerEvents {
+  pointer-events: none;
+}
+
+.enablePointerEvents {
+  pointer-events: auto;
+}
+
+.bubbleAppear {
+  animation-duration: 2s;
+  animation-name: hello;
+  animation-timing-function: ease-in;
+}
+
+@keyframes hello {
+  0% {
+    transform: translateY(100%) rotate(-270deg);
+  }
+
+  6% {
+    transform: translateY(-32.27%) rotate(-270deg);
+  }
+
+  11% {
+    transform: translateY(-13.22%) rotate(-270deg);
+  }
+
+  20% {
+    transform: translateY(4.63%) rotate(-270deg);
+  }
+
+  26% {
+    transform: translateY(-1.74%) rotate(-270deg);
+  }
+
+  33% {
+    transform: translateY(-0.58%) rotate(-270deg);
+  }
+
+  40% {
+    transform: translateY(.2%) rotate(0deg);
+  }
+
+  45% {
+    transform: translateY(0%);
+  }
+}
