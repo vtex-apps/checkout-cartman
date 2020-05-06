@@ -18,6 +18,10 @@ const CartmanBubble: React.FC = () => {
 
   useEffect(() => {
     document.body.appendChild(containerElement)
+
+    return () => {
+      document.body.removeChild(containerElement)
+    }
   }, [containerElement])
 
   const handleBubbleClick = () => {
