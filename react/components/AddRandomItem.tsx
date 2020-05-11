@@ -15,7 +15,6 @@ interface SearchSpec {
   categoryId?: string
   brandId?: string
   collectionId?: string
-  sellerId?: string
   priceFrom?: string
   priceTo?: string
 }
@@ -111,7 +110,7 @@ const AddRandomItem: React.FC<{ onBack?: () => void }> = ({ onBack }) => {
       selectedSkus.map(({ itemId }) => ({
         id: itemId,
         quantity: +searchSpecRef.current.itemsQuantity,
-        seller: searchSpecRef.current.sellerId ?? '1',
+        seller: '1',
       }))
     )
   }, [loading, data, addItem])
@@ -184,15 +183,6 @@ const AddRandomItem: React.FC<{ onBack?: () => void }> = ({ onBack }) => {
           onChange={handleChange}
           name="collectionId"
           value={searchSpec.collectionId}
-        />
-      </div>
-      <div className="pb4">
-        <Input
-          label={<FormattedMessage id="store/cartman.sellerId" />}
-          autoComplete="off"
-          onChange={handleChange}
-          name="sellerId"
-          value={searchSpec.sellerId}
         />
       </div>
       <div className="pb4 cf">

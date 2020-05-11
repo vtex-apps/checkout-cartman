@@ -17,7 +17,6 @@
   "store/cartman.categoryId": "Category ID",
   "store/cartman.brandId": "Brand ID",
   "store/cartman.collectionId": "Collection ID",
-  "store/cartman.sellerId": "Seller ID",
   "store/cartman.priceFrom": "Price from",
   "store/cartman.priceTo": "Price up to",
   "store/cartman.addItemsToCart": "Add items to Cart",
