@@ -102,7 +102,9 @@ const AddRandomItem: React.FC<{ onBack?: () => void }> = ({ onBack }) => {
     )
 
     const selectedSkus = skus
-      .sort(() => 0.5 - Math.random())
+      .map(sku => ({ key: Math.random(), value: sku }))
+      .sort((a, b) => a.key - b.key)
+      .map(({ value }) => value)
       .slice(0, +searchSpecRef.current.numberOfItems)
 
     addItem(
