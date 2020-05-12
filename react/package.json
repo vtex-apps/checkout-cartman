@@ -4,20 +4,24 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@types/classnames": "^2.2.10",
+    "@types/graphql": "^14.5.0",
     "@types/node": "^13.11.1",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
     "@types/react-transition-group": "^4.2.4",
     "vtex.checkout-cart": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.25.0/public/@types/vtex.checkout-cart",
-    "vtex.checkout-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.32.1/public/@types/vtex.checkout-graphql",
+    "vtex.checkout-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.33.2/public/@types/vtex.checkout-graphql",
+    "vtex.order-items": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-items@0.7.4/public/@types/vtex.order-items",
     "vtex.order-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.8.4/public/@types/vtex.order-manager",
-    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.99.0/public/@types/vtex.render-runtime",
-    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.113.2/public/@types/vtex.styleguide"
+    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.100.2/public/@types/vtex.render-runtime",
+    "vtex.search-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.25.1/public/_types/react",
+    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.115.0/public/@types/vtex.styleguide"
   },
   "dependencies": {
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.3.1",
     "react": "^16.13.1",
+    "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
     "react-intl": "^4.4.0",
     "react-json-view": "^1.19.1",

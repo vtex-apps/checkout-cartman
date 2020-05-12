@@ -1,12 +1,13 @@
 import classnames from 'classnames'
 import React, { useState, Fragment, useCallback } from 'react'
 import { FormattedMessage } from 'react-intl'
-import { ButtonPlain, IconClose, IconCaretLeft } from 'vtex.styleguide'
+import { Button, IconClose, IconCaretLeft } from 'vtex.styleguide'
 
 import Actions from './Actions'
 import { Menu, MenuItem } from './Menu'
 import { useCartman } from './CartmanContext'
 import CartDetails from './CartDetails'
+import AddRandomItem from './AddRandomItem'
 
 const Header: React.FC = () => {
   const { title, setOpen, backAction } = useCartman()
@@ -47,7 +48,7 @@ const CartmanSidebar: React.FC<Props> = ({ className }) => {
 
   const [currentStep, setCurrentStep] = useState<string | null>(null)
 
-  const handleDetailBackClick = useCallback(() => setCurrentStep(null), [])
+  const handleBack = useCallback(() => setCurrentStep(null), [])
 
   return (
     <aside
@@ -72,6 +73,10 @@ const CartmanSidebar: React.FC<Props> = ({ className }) => {
                     title={<FormattedMessage id="store/cartman.viewDetails" />}
                     onClick={() => setCurrentStep('cart-details')}
                   />
+                  <MenuItem
+                    title={<FormattedMessage id="store/cartman.addRandom" />}
+                    onClick={() => setCurrentStep('add-random-item')}
+                  />
                 </Menu>
 
                 <div className="flex flex-column items-center mv5 ph4 mv7-m w-100 lh-copy f6">
@@ -81,15 +86,17 @@ const CartmanSidebar: React.FC<Props> = ({ className }) => {
                   <span className="dib c-emphasis mb3">
                     <FormattedMessage id="store/cartman.cartmanWarning" />
                   </span>
-                  <ButtonPlain onClick={handleDeactivate}>
+                  <Button variation="tertiary" onClick={handleDeactivate}>
                     <span className="ttu">
                       <FormattedMessage id="store/cartman.deactivate" />
                     </span>
-                  </ButtonPlain>
+                  </Button>
                 </div>
               </Fragment>
             ) : currentStep === 'cart-details' ? (
-              <CartDetails onBackClick={handleDetailBackClick} />
+              <CartDetails onBack={handleBack} />
+            ) : currentStep === 'add-random-item' ? (
+              <AddRandomItem onBack={handleBack} />
             ) : null}
           </div>
         </div>

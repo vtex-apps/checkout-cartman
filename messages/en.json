@@ -17,7 +17,6 @@
   "store/cartman.categoryId": "Category ID",
   "store/cartman.brandId": "Brand ID",
   "store/cartman.collectionId": "Collection ID",
-  "store/cartman.sellerId": "Seller ID",
   "store/cartman.priceFrom": "Price from",
   "store/cartman.priceTo": "Price up to",
   "store/cartman.addItemsToCart": "Add items to Cart",
@@ -47,5 +46,7 @@
   "store/cartman.deactivate": "Deactivate Cartman",
   "store/cartman.deactivateMessage1": "Cartman will not be loaded for you in this Account anymore.",
   "store/cartman.deactivateMessage2": "If you change your mind later, you can reactivate Cartman through the link:",
-  "store/cartman.deactivateUndo": "Undo Deactivate"
+  "store/cartman.deactivateUndo": "Undo Deactivate",
+  "store/cartman.priceFromPlaceholder": "99,99",
+  "store/cartman.priceToPlaceholder": "99,99"
 }

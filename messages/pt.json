@@ -17,7 +17,6 @@
   "store/cartman.categoryId": "ID da Categoria",
   "store/cartman.brandId": "ID da Marca",
   "store/cartman.collectionId": "ID da Coleção",
-  "store/cartman.sellerId": "ID do Seller",
   "store/cartman.priceFrom": "Preço de",
   "store/cartman.priceTo": "Preço até",
   "store/cartman.addItemsToCart": "Adicionar itens ao Carrinho",
@@ -47,5 +46,7 @@
   "store/cartman.deactivate": "Desativar o Cartman",
   "store/cartman.deactivateMessage1": "O Cartman não vai mais aparecer mais nesta conta para você.",
   "store/cartman.deactivateMessage2": "Se você mudar de ideia, basta user o link para reativer o Cartman:",
-  "store/cartman.deactivateUndo": "Reativar agora"
+  "store/cartman.deactivateUndo": "Reativar agora",
+  "store/cartman.priceFromPlaceholder": "99.99",
+  "store/cartman.priceToPlaceholder": "99.99"
 }

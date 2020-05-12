@@ -1,0 +1,25 @@
+query Products(
+  $query: String
+  $map: String
+  $categoryId: String
+  $collectionId: String
+  $priceRange: String
+) {
+  products(
+    from: 0
+    to: 49
+    map: $map
+    query: $query
+    category: $categoryId
+    collection: $collectionId
+    priceRange: $priceRange
+    simulationBehavior: skip
+  ) @context(provider: "vtex.search-graphql@0.x") {
+    items {
+      itemId
+      sellers {
+        sellerId
+      }
+    }
+  }
+}

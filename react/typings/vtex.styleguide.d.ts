@@ -16,5 +16,16 @@ declare module 'vtex.styleguide' {
     'className' | 'style'
   > & {
     variation?: 'primary' | 'secondary' | 'tertiary'
+    isLoading?: boolean
+  }>
+
+  const Alert: React.FC
+
+  const Input: React.FC<Omit<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    'className' | 'style'
+  > & {
+    autoFocus?: boolean
+    label?: React.ReactNode
   }>
 }
