@@ -19,8 +19,13 @@ interface SearchSpec {
   priceTo?: string
 }
 
+interface Seller {
+  sellerId: string
+}
+
 interface Item {
   itemId: string
+  sellers: Seller[]
 }
 
 interface Product {
@@ -107,10 +112,10 @@ const AddRandomItem: React.FC<{ onBack?: () => void }> = ({ onBack }) => {
       .slice(0, +searchSpecRef.current.numberOfItems)
 
     addItem(
-      selectedSkus.map(({ itemId }) => ({
+      selectedSkus.map(({ itemId, sellers }) => ({
         id: itemId,
         quantity: +searchSpecRef.current.itemsQuantity,
-        seller: '1',
+        seller: sellers[0]?.sellerId ?? '1',
       }))
     )
   }, [loading, data, addItem])

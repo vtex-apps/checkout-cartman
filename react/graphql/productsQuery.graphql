@@ -17,6 +17,9 @@ query Products(
   ) @context(provider: "vtex.search-graphql@0.x") {
     items {
       itemId
+      sellers {
+        sellerId
+      }
     }
   }
 }
