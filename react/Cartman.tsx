@@ -17,7 +17,7 @@ const Cartman: React.FC = () => {
 
     const isCallCenterOperator = orderForm.userType === 'CALL_CENTER_OPERATOR'
 
-    return allowedDomain && isCallCenterOperator
+    return allowedDomain || isCallCenterOperator
   }, [orderForm.userType])
 
   if (!shouldRenderCartman) {
